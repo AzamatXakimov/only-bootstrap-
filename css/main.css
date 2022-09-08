@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 /* ROOT */
@@ -8,7 +15,8 @@
 }
 
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html{
@@ -32,8 +40,13 @@ h4{
 }
 
 body{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100%;
     margin: 0;
     font-weight: var(--main-font-weight);
@@ -54,7 +67,7 @@ body{
 ::-webkit-scrollbar-thumb {
     background: transparent;
 }
-  
+
   /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: transparent;
@@ -92,7 +105,9 @@ body{
 }
 
 .site-main{
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 
 .hero-textbox{
@@ -119,7 +134,8 @@ body{
 
 .posts-imgbox{
     width: 200px;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     background-color: #55595c;
 }
 
